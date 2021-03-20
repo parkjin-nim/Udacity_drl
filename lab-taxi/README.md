@@ -1,4 +1,4 @@
-# Taxi Problem
+# FrozenLake-V3 Problem
 
 ### Getting Started
 
