@@ -56,11 +56,6 @@ class Agent:
         current = self.Q[state][action]  # estimate in Q-table (for current state, action pair)
         
         if not done:
-            # Q-learning is implemented
-            # Qsa_next = np.max(self.Q[next_state]) if next_state is not None else 0  # value of next state 
-            
-            # Expected-Sarsa implemented
-            # Qsa_next = np.dot(self.Q[next_state], self.policy)
             
             # Sarsa implemented
             next_action  = self.select_action(next_state)
@@ -76,7 +71,7 @@ class Agent:
             new_value = current + (self.alpha * (target - current)) # get updated value, alpha is .01
             self.Q[state][action] = new_value
 
-            # at the end of one episode, decay epsilon                      
+            # at the end of one episode, decay epsilon                   
             self.i_episode += 1
             self.eps = max(self.eps**self.i_episode, self.eps_min)
             #self.eps = max(1./self.i_episode, 0.1)
