@@ -27,15 +27,13 @@ The task is episodic, and in order to solve the environment, your agent must get
 ### Project Details
 
 
-[![Watch the video](https://i9.ytimg.com/vi/dJYvvBxebkc/mq2.jpg?sqp=CKiB8YIG&rs=AOn4CLAHLh93oUwpgW5cPRViOsK-_NrD5g)](https://youtu.be/dJYvvBxebkc)
+[![Watch the video](https://i9.ytimg.com/vi/dJYvvBxebkc/mq1.jpg?sqp=COj9hoMG&rs=AOn4CLDk5cPpvhxWSforXf-GgwBJO9aR9Q)](https://youtu.be/dJYvvBxebkc)
 
 [DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf), [Double-DQN](https://arxiv.org/pdf/1509.06461.pdf), and [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952.pdf)(PERDDQN) agents were implemented by the papers. Loss functions implemented as follows.
 
 - **DQN**
 
-
-
-![](./figures/DQN.png =100x20)
+![Trained Agent][image2]
 
 Deep-Q Network uses experience replay and fixed Q-targets. It records transition(St,At,Rt+1,St+1) in replay memory. Then it samples a random mini-batch of transitions(s,a,r,s′) from the replay memory. When optimizing MSE between Q-network prediction and Q-learning targets using the gradient descent. The moving target problem is solved by setting Q-learning targets w.r.t. old, fixed parameters w-.
 
