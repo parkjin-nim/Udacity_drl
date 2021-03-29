@@ -33,9 +33,9 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 - **DQN**
 
-![Trained Agent][image2 =100x20]
 
 
+![](./figures/DQN.png =100x20)
 
 Deep-Q Network uses experience replay and fixed Q-targets. It records transition(St,At,Rt+1,St+1) in replay memory. Then it samples a random mini-batch of transitions(s,a,r,s′) from the replay memory. When optimizing MSE between Q-network prediction and Q-learning targets using the gradient descent. The moving target problem is solved by setting Q-learning targets w.r.t. old, fixed parameters w-.
 
