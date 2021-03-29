@@ -1,7 +1,7 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
-[image2]: ./figures/DQN.png=700x "DQN"
+[image2]: ./figures/DQN.png "DQN"
 [image3]: ./figures/DDQN.png "Double-DQN"
 [image4]: ./figures/PREDDQN.png "Prioritized Experience Replay"
 
@@ -10,7 +10,7 @@
 In this project, three deep-reinforcement (TD)learning agents were trained to navigate and collect bananas in a large square game world environment provided by the [Unity ML-Agent Toolkit](https://github.com/Unity-Technologies/ml-agents). Agents implemented and trained in the project include DQN, Double-DQN, and PERDDQN(Prioritized Experience Replay Double-DQN) agents. A trained agent collects bananas as below. 
 
 ![Trained Agent][image1]
-
+![](./figures/DQN.png =700x)
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
