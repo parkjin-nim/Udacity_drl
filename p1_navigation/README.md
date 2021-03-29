@@ -26,14 +26,16 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ### Project Details
 
+[DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf), [Double-DQN](https://arxiv.org/pdf/1509.06461.pdf), and [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952.pdf)(PERDDQN) agents were implemented by the papers. The video below shows the process how it is trained!
 
 [![Watch the video](https://i9.ytimg.com/vi/dJYvvBxebkc/mq1.jpg?sqp=COj9hoMG&rs=AOn4CLDk5cPpvhxWSforXf-GgwBJO9aR9Q)](https://youtu.be/dJYvvBxebkc)
 
-[DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf), [Double-DQN](https://arxiv.org/pdf/1509.06461.pdf), and [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952.pdf)(PERDDQN) agents were implemented by the papers. Loss functions implemented as follows.
 
-- **DQN**
+### **DQN**
 
 ![Trained Agent][image2]
+
+![test image size](./figures/DQN.png){:height="50%" width="50%"}
 
 Deep-Q Network uses experience replay and fixed Q-targets. It records transition(St,At,Rt+1,St+1) in replay memory. Then it samples a random mini-batch of transitions(s,a,r,s′) from the replay memory. When optimizing MSE between Q-network prediction and Q-learning targets using the gradient descent. The moving target problem is solved by setting Q-learning targets w.r.t. old, fixed parameters w-.
 
@@ -49,7 +51,8 @@ Deep-Q Network uses experience replay and fixed Q-targets. It records transition
     self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)                     
 ```
 
-- **Double-Q DQN**
+
+### **Double-Q DQN**
 
 Deep Q-Learning tends to [overestimate action values](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf). Double Q-Learning has been shown to work well in practice to help with this. It further seperates the Q-learning target into two approximators, one for choosing the next best-action the other for evaluation. Old, fixed parameters w- in DQN is reused for the evaluation. 
 
@@ -69,7 +72,7 @@ Deep Q-Learning tends to [overestimate action values](https://www.ri.cmu.edu/pub
 
 ```
 
-- **Prioritized Experience Replay DDQN**
+### **Prioritized Experience Replay DDQN**
 
 ![Trained Agent][image4]
 
@@ -92,6 +95,8 @@ Deep Q-Learning samples experience transitions uniformly from a replay memory. P
     self.optimizer.step()
     self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)                     
 ```
+
+--
 
 
 ### Getting Started
