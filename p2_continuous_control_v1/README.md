@@ -46,6 +46,7 @@ Run the `Continuous_Control_v1.ipynb` notebook to train the DDPG agent using the
 
 Once trained, the actor critic model weights are saved in checkpoint_actor_v1.pth and checkpint_critic_v1.pth.
 
-[![Watch the video](./Reacher.jpg, width=600px)](https://youtu.be/2K0p_ZrE2vs)
+<img src="Reacher.jpg" width=600px>
+[![Watch the video]](https://youtu.be/2K0p_ZrE2vs)
 
 
