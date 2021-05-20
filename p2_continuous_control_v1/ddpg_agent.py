@@ -159,7 +159,14 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        #dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        # This implementation of Ornstein-Uhlenbeck process (random.random()) can have significant bias towards positive values
+        # and eventually can result in poor training.
+        # So, the use of uniform distribution is biased and since it tends to accumulate at around 0.6.
+        # You could try the replacement with a generator that draws samples from a standard Normal distribution
+        # (np.random.standard_normal), and thus generate a different noise sample for each agent as opposed to applying same 
+        # noise to all agents.
+        dx = self.theta * (self.mu - x) + self.sigma * (np.random.standard_normal(size=x.shape))
         self.state = x + dx
         return self.state
 
