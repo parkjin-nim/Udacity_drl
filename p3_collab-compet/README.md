@@ -43,5 +43,5 @@ Follow the instructions in `Tennis.ipynb` to get started with training your own 
 
 Once trained, the actor critic model weights are saved. For agent 0 in checkpoint_actor_0.pth and checkpint_critic_0.pth. For agent 1 in checkpoint_actor_1.pth and checkpint_critic_1.pth.
 
-[![Watch the video](https://github.com/parkjin-nim/reacher/blob/master/training_tennis.jpg)](https://www.youtube.com/watch?v=FzoHH8_3CbQ)
+[![Watch the video](https://github.com/parkjin-nim/Deep_reinforcement_learning/blob/master/p3_collab-compet/tennis_image.png)](https://www.youtube.com/watch?v=FzoHH8_3CbQ)
 
